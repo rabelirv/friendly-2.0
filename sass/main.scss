@@ -1,0 +1,24 @@
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/base';
+@import 'base/animations';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/button';
+
+@import 'pages/home';
+
+@import 'layout/header';
+@import 'layout/grid';
+
+/*
+COLORS:
+
+Light orange: #F4A442
+Medium orange: #ecc629
+Dark pink: #F442B0
+
+*/
