@@ -1,7 +1,7 @@
 import React from 'react'
 import UserList from './UserList'
 import Auth from '../modules/Auth'
-import '../styles/Profile.css'
+// import '../styles/Profile.css'
 
 class Profile extends React.Component {
   state ={

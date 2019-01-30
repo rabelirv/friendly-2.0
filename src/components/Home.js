@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Home.css'
+import img from '../img/logo-white.png'
 import {Link } from 'react-router-dom'
 
 class Home extends React.Component {
@@ -9,7 +10,7 @@ class Home extends React.Component {
       <div>
       <header className='header'>
             <div className="header__logo-box">
-            <img src= "../img/logo-white.png" alt="Logo" className="header__logo"/>
+            <img src= {img} alt="Logo" className="header__logo"/>
             </div>
             <div className="header__text-box">
               <h1 className="heading-primary">
