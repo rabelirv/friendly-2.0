@@ -1,3 +1,6 @@
 [submodule "story"]
 	path = story
 	url = git@github.com:rabelirv/augmented-reality.git
+[submodule "chat-api"]
+	path = chat-api
+	url = git@github.com:rabelirv/simple-chat-api.git
