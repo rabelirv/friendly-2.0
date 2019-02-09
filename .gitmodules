@@ -1,0 +1,3 @@
+[submodule "story"]
+	path = story
+	url = git@github.com:rabelirv/augmented-reality.git
