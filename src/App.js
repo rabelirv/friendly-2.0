@@ -12,8 +12,29 @@ import Auth from './modules/Auth'
 class App extends Component {
   state={
     auth: Auth.isUserAuthenticated(),
-    username: ''
+    username: '',
+    selfie:'',
+    selfieArr:[]
   }
+
+  grabSelfie=(selfie)=>{
+    this.setState({
+      selfie:selfie,
+      selfieArr:[...this.state.selfieArr,selfie]
+    })
+    fetch('http://localhost:3004/pictures',{
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      picture:{
+        selfie:selfie
+      }
+    })
+  })
+}
 
   handleSubmit = (newUser)=>{
     console.log(newUser)
@@ -79,7 +100,7 @@ class App extends Component {
         <Route exact path='/signup' render={()=>(this.state.auth) ? <Redirect to = '/profile' /> : <SignUp handleSubmit={this.handleSubmit}/>}/>
         <Route exact path='/profile' render={()=><Profile/>}/>
         <Route exact path='/chatapp' render={()=><ChatApp username={this.state.username}/>}/>
-        <Route exact path='/takeselfie' render={()=><Camera/>}/>
+        <Route exact path='/takeselfie' render={()=><Camera grabSelfie={this.grabSelfie} selfieArr={this.state.selfieArr}/>}/>
         </Switch>
 
       </div>
