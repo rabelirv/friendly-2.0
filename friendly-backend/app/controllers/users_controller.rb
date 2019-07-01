@@ -16,14 +16,6 @@ class UsersController < ApiController
         render json:{ user: {username: user.username, email: user.email, avatar: user.avatar, name: user.name}}
       end
 
-      def edit
-
-      end
-
-      def update
-
-      end
-
       def destroy
         user = User.find(params[:id])
         user.destroy

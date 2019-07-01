@@ -90,7 +90,6 @@ class App extends Component {
     })
   }
   render() {
-    console.log(this.state);
     return (
       <div>
         <NavBar endSesion ={this.endSesion}/>

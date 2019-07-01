@@ -20,7 +20,6 @@ class Camera extends React.Component{
     this.props.grabSelfie(imageSrc)
   }
 
-
   render(){
     let selfies = this.props.selfieArr.map(selfie=>{
       return <img src={selfie} alt='selfie'/>
